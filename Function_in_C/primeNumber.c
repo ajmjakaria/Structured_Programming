@@ -17,9 +17,22 @@ bool isPrime(int n)  //Function to check prime
 
 int main()
 {
-    int n;
+    int n, t_case, i;
+    scanf("%d", &t_case);
+    for(i = 1; i <= t_case; i++){
     scanf("%d", &n);
-   /* Way 1:
+    printf(isPrime(n) ? "Case %d: %d is a prime.\n" : "Case %d: %d is not a prime.\n", i, n);
+    }
+    return 0;
+}
+
+///SAMPLE I/0
+/*
+5
+10 2 5 6 4
+*/
+
+/* Way 1:
    if(!isPrime(n)) //1
         printf("%d is not a prime.\n", n);
     else
@@ -28,6 +41,3 @@ int main()
     //(isPrime(n)) ? printf("%d is a prime.\n", n) : printf("%d is not a prime.\n", n);
 
     //Way 2
-    printf(isPrime(n) ? "%d is a prime.\n" : "%d is not a prime.\n", n);
-    return 0;
-}
